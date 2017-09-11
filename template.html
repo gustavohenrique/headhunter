@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="We make awesome digital products">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" class="ui" href="dist/semantic.min.css">
+<title>candidatos</title>
+</head>
+<body>
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <span class="header item">candidatos</span>
+    </div>
+  </div>
+  <div class="ui container" style="margin-top: 60px">
+    <div class="ui link centered align four cards full">
+      #for @f in @followers:
+        <div class="ui card">
+          <div class="image">
+            <img src="@f.avatar_url">
+          </div>
+          <div class="content">
+            <a class="header" href="@f.url">@f.name</a>
+            <div class="meta">
+              <span class="date">@f.login</span>
+            </div>
+            <div class="description">
+              <div>@f.location</div>
+              <div>@f.email</div>
+              <div>@f.company</div>
+            </div>
+          </div>
+          <div class="extra content">
+            <span class="right floated">
+              @f.updated_at
+            </span>
+            <span>
+              @f.created_at
+            </span>
+          </div>
+        </div>
+      #end
+    </div>
+  </div>
+</body>
+</html>
